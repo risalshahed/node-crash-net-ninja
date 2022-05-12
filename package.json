@@ -1,0 +1,22 @@
+{
+  "name": "node-js-net-ninja",
+  "version": "1.0.0",
+  "description": "",
+  "main": "delete-files.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risalshahed/node-crash-net-ninja.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/risalshahed/node-crash-net-ninja/issues"
+  },
+  "homepage": "https://github.com/risalshahed/node-crash-net-ninja#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

@@ -1,0 +1,10 @@
+npm install -g nodemon
+In CMD -> nodemon -g
+
+In our project directory, write
+npm init
+this will create a package.json file
+package.json keeps track on our project dependencies
+
+BEAUTY of package.json file
+ei file a, dependencies er vitore ja ja thake, ta dekhe shob dependencies node e install kore nibe just if we write the "npm install" command! what a beauty!!!

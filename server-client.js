@@ -1,9 +1,23 @@
 
 const http = require('http');
 const fs = require('fs');
+const _ = require('lodash');
 
 const server = http.createServer( (req, res) => {
-  console.log(req.url, req.method);
+  // lodash
+  // generate a number randomly between 0 & 20
+  const number = _.random(0, 20);
+  console.log(number);
+
+  // run a code ONLY ONE TIME
+  const yo = _.once( () => {
+    console.log('hello');
+  })
+
+  yo();
+  // once dc, tai nicher gula r kaj krbe na
+  yo();
+  yo();
 
   // set header content type
   res.setHeader('Content-type', 'text/html');
