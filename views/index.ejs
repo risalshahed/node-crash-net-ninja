@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+  
+  <!-- include nav -->
+  <%- include('./partials/nav.ejs') %>
+  <!-- <%= include('./partials/nav.ejs') %> -->
+  <!-- "=" dewa jabe NAA, dle html tag gula o string hisabe nibe! use '-' -->
+
+  <div class="blogs content">
+    <h2>All Blogs</h2>
+    <!-- an if statement & 'print the blogs of app.js' with ejs tag & html -->
+    <% if( blogs.length > 0 ) {
+      blogs.map( (blog) => { %>
+      <h3><%= blog.title %></h3>
+      <p><%= blog.snippet %></p>
+      <% })
+    } else { %>
+      <p>No blogs to display</p>
+    <% } %>
+  </div>
+
+  <%- include('./partials/footer.ejs') %>
+</body>
+</html>

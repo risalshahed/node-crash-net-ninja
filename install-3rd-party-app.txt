@@ -1,3 +1,5 @@
+*** 'npmjs.com' a giye shob npm command pawa jabe; say, search 'express' & copy commands
+
 npm install -g nodemon
 In CMD -> nodemon -g
 
@@ -8,3 +10,9 @@ package.json keeps track on our project dependencies
 
 BEAUTY of package.json file
 ei file a, dependencies er vitore ja ja thake, ta dekhe shob dependencies node e install kore nibe just if we write the "npm install" command! what a beauty!!!
+
+more to install
+npm i express
+npm i ejs
+npm i morgan
+npm i mongoose
