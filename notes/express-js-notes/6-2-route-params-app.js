@@ -87,21 +87,6 @@ app.get('/blogs/:id', (req, res) => {
     })
 })
 
-// handle DELETE
-app.delete('/blogs/:id', (req, res) => {
-  const id = req.params.id;
-
-  Blog.findByIdAndDelete(id)
-  // jokhn front-end theke AJAX request pathano hbe, tokhn amra node theke response redirect korte parbo NAA! We've to send JSON or text data back to the browser & that JSON data (in the front-end; here in script tag of details.ejs file) have redirect property & that property is gonna be a URL where we wanna redirect
-  .then(result => {
-    // id dhore DELETE korar pore, '/blogs' page a redirect hbe & oi "deleted" blog baad a bakigulo show krbe
-    res.json({ redirect: '/blogs' }); // ei 'redirect' property front-end a use krbo
-  })
-  .catch(err => {
-    console.log(err);
-  })
-})
-
 
 // Route About Page with render()
 app.get('/about', (req, res) => {

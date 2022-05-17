@@ -1,0 +1,44 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="details content">
+    <h2><%= blog.title %></h2>
+    <div class="content">
+      <p><%= blog.body %></p>
+    </div>
+    <!-- This data-doc will be got in JS as `${dataset.doc.}`  -->
+    <a class="delete" data-doc="<%= blog._id %>">delete</a>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+
+  <!-- As button click & display/delete or any function is a front end functionality, we'll do this in script tag -->
+
+  <script>
+    const trashcan = document.querySelector('a.delete');  // 'a' tag er class 'delete'
+
+    trashcan.addEventListener('click', (e) => {
+      // console.log(trashcan);
+      const endpoint = `/blogs/${trashcan.dataset.doc}`;
+      // er through te amra /blogs/:id pabo
+
+      // this is an AJAX request
+      fetch(endpoint, {
+        method: 'DELETE', // method specify korlm
+      })
+      .then((response) => response.json())
+      // eita arekta promiste return kre jeikhane response.json data actual JS Object k pass kre ja amra use krte pari
+      // .then((data) => console.log(data))
+      // single-blog delete howar sathe sathe 'blogs' page a chole asbe using 'redirect' property from app.js file
+      .then((data) => window.location.href = data.redirect)
+      .catch((err) => {
+        console.log(err)
+      })
+    })
+    
+  </script>
+</body>
+</html>

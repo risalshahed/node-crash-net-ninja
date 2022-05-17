@@ -13,10 +13,8 @@
     <!-- an if statement & 'print the blogs of app.js' with ejs tag & html -->
     <% if( blogs.length > 0 ) {
       blogs.map( (blog) => { %>
-        <a class="single" href="/blogs/<%= blog._id %>">
-          <h3><%= blog.title %></h3>
-          <p><%= blog.snippet %></p>
-        </a>
+        <h3><%= blog.title %></h3>
+        <p><%= blog.snippet %></p>
       <% })
     } else { %>
       <p>No blogs to display</p>
