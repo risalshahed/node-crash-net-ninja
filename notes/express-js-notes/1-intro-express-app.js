@@ -1,3 +1,18 @@
+
+/* ----------------------------------------------
+
+  Very First steps to start in express JS!
+  
+  1. npm init
+  2. npm i express
+  3. create app.js file inside root directory of project
+  4. require express
+  5. create app variable & setup an express app
+  6. listen to the port (here 3000)
+
+---------------------------------------------- */
+
+
 // return 'express' function & store it in a const express
 const express = require('express');
 
@@ -17,3 +32,4 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.send('<h1>About Page</h1>');
 })
+
